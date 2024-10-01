@@ -52,29 +52,31 @@
 // }
 
 // 5
-// void main() {
-//   var n = int.parse(stdin.readLineSync()!);
-//   for (int i = 1; i <= n; i++) {
-//     var x = i;
-//     for (int j = 1; j <= i; j++) {
-//       if (i % 2 == 0) {
-//         if (x % 2 != 0) {
-//           stdout.write("${x * x} ");
-//         } else if (x % 2 == 0) {
-//           stdout.write("${x * x * x} ");
-//         }
-//       } else {
-//         if (x % 2 == 0) {
-//           stdout.write("${x * x * x} ");
-//         } else {
-//           stdout.write("${x * x} ");
-//         }
-//       }
-//       x++;
-//     }
-//     stdout.writeln();
-//   }
-// }
+import 'dart:io';
+
+void main() {
+  var n = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= n; i++) {
+    var x = i;
+    for (int j = 1; j <= i; j++) {
+      if (i % 2 == 0) {
+        if (x % 2 != 0) {
+          stdout.write("${x * x} ");
+        } else if (x % 2 == 0) {
+          stdout.write("${x * x * x} ");
+        }
+      } else {
+        if (x % 2 == 0) {
+          stdout.write("${x * x * x} ");
+        } else {
+          stdout.write("${x * x} ");
+        }
+      }
+      x++;
+    }
+    stdout.writeln();
+  }
+}
 
 // 6
 // void main() {
